@@ -5,7 +5,7 @@ import numpy as np
 
 def leaflet_plot_stations(binsize, hashid):
 
-    df = pd.read_csv('BinSize_d{}.csv'.format(binsize))
+    df = pd.read_csv('InputData/BinSize_d{}.csv'.format(binsize))
 
     station_locations_by_hash = df[df['hash'] == hashid]
 
@@ -21,7 +21,7 @@ def leaflet_plot_stations(binsize, hashid):
 leaflet_plot_stations(400,'fd403b3054061a52e5c4a08dadc245bc6e1b0adabbf12a9eadba68e8')
 
 #Read from csv file
-df = pd.read_csv('fb441e62df2d58994928907a91895ec62c2c42e6cd075c2700843b89.csv')
+df = pd.read_csv('InputData/fb441e62df2d58994928907a91895ec62c2c42e6cd075c2700843b89.csv')
 
 #Sort based on month and date for an Year
 df = df.sort_values(by=['ID','Date'])
